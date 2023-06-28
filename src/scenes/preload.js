@@ -76,8 +76,8 @@ export default function () {
       .add('static/textures/misc-0.json')
       .add('static/textures/misc-1.json')
       .add('static/textures/misc-2.json')
-	  .add('static/textures/misc-3.json')
-	  .add('static/textures/misc-4.json')
+	    .add('static/textures/misc-3.json')
+	    .add('static/textures/misc-4.json')
       .load(() => {
         layout.destroy()
         resolve()

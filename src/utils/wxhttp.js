@@ -37,11 +37,7 @@ const wxPromisify = fn => {
   }
 }
 
-//const getLocationPromisified = wxPromisify(runtime.getLocation);//获取经纬度
-const showModalPromisified = wxPromisify(runtime.showModal);//弹窗
-const setStorageSync = runtime.setStorageSync;//设置本地变量
-const getStorageSync = runtime.getStorageSync;
-const checkSession = runtime.checkSession;
+
 
 // 封装post请求
 const put = (url, data) => {
@@ -154,11 +150,5 @@ module.exports = {
   post,
   get,
   ajax,
-  put,
-  //getLocationPromisified,
-  wxPromisify,
-  showModalPromisified,
-  getStorageSync,
-  setStorageSync,
-  checkSession,
+  put
 }

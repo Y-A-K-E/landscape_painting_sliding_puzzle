@@ -14,13 +14,13 @@ class Piece extends PIXI.Container {
     let texture = PIXI.Texture.from(resourece).clone()
 
     // 重构frame，将图片按照难度和序号切割成小块
-	console.log(texture,texture.baseTexture.realHeight,texture.baseTexture.realWidth);
+	//console.log(texture,texture.baseTexture.realHeight,texture.baseTexture.realWidth);
     let cutX = 1000 / type 
     let cutY = cutX
-	console.log("分割~index:",index)	
+	//console.log("分割~index:",index)	
 	//console.log("分割大小:",cutX,cutY);
 	
-	console.log("分割坐标:",texture.frame.x + (index % type) * cutX,texture.frame.y + Math.floor(index / type ) * cutY)
+	//console.log("分割坐标:",texture.frame.x + (index % type) * cutX,texture.frame.y + Math.floor(index / type ) * cutY)
 	
     let rectangle = new PIXI.Rectangle(
       texture.frame.x + (index % type) * cutX,
@@ -28,7 +28,7 @@ class Piece extends PIXI.Container {
       cutX,
       cutX)
     texture.frame = rectangle
-	console.log("完成分割")
+	  //console.log("完成分割")
 	
     let piece = new PIXI.Sprite(texture)
     this.addChild(piece);

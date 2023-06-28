@@ -8,17 +8,7 @@ const TIMER_RATIO = 0.6
 class Info extends PIXI.Container {
   constructor() {
     super()
-    this.timer_bg = PIXI.Sprite.from('time_bg.png');
-    this.addChild(this.timer_bg)
-
-    let style = new PIXI.TextStyle({
-      fontSize: this.timer_bg.height * TIMER_RATIO,
-      fill: "white"
-    });
-    this.timer_string = new PIXI.Text('00:00', style);
-    this.timer_string.y = this.timer_bg.height / 2 - this.timer_string.height / 2
-    this.timer_string.x = this.timer_bg.width / 2 - this.timer_string.width / 2
-    this.addChild(this.timer_string);
+    this.timer_string = new PIXI.Text('00:00');
   }
   setTime(currentTime) {
     let timeS = currentTime / 1000;

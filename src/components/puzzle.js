@@ -17,8 +17,6 @@ class Puzzle extends PIXI.Container {
     for (let i = 0; i < this.puzzleMap.length; i++) {
       let position = this.puzzleMap[i] - 1;
       let piece = new Piece(resourece, type, i, position)
-	  //piece.width /= 1.3
-	  //piece.height /= 1.3
       this.addChild(piece);
     }
 
