@@ -1,7 +1,7 @@
 {
-  "name": "sliding_puzzle_pixi",
+  "name": "landscape_painting_sliding_puzzle",
   "version": "1.0.0",
-  "description": "Weixin Mini Game, Sliding Puzzle.",
+  "description": "wechat mini game ",
   "main": "dist/game.js",
   "scripts": {
     "dev": "SET NODE_OPTIONS=--openssl-legacy-provider && webpack -w",
@@ -13,10 +13,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@gitee.com:nanwangjkl/sliding_puzzle_pixi.git"
+    "url": "git@github.com:Y-A-K-E/landscape_painting_sliding_puzzle.git"
   },
-  "author": "Nan, Wang",
-  "license": "ISC",
+  "author": "Y-A-K-E",
+  "license": "appace",
   "devDependencies": {
     "@babel/core": "^7.1.2",
     "@babel/plugin-proposal-class-properties": "^7.1.0",
