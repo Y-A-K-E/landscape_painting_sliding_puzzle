@@ -37,15 +37,7 @@ export default async function () {
       await loadBaseTexture('static/textures/misc-4.jpg'),
       require('../../dist/static/textures/misc-4.json')
     ).parse(resolve)
-  })  
-  for (let i = 0; i < 5; i++) {
-     //await loadBaseTexture(`static/puzzle/easy/${i}.jpg`)
-    // await loadBaseTexture(`static/puzzle/middle/${i}.jpg`)
-    // await loadBaseTexture(`static/puzzle/hard/${i}.jpg`)
-    //PIXI.BaseTexture.addToCache(await loadBaseTexture(`static/puzzle/easy/${i}.jpg`), `easy/${i}.jpg`)
-    //PIXI.BaseTexture.addToCache(await loadBaseTexture(`static/puzzle/middle/${i}.jpg`), `middle/${i}.jpg`)
-    //PIXI.BaseTexture.addToCache(await loadBaseTexture(`static/puzzle/hard/${i}.jpg`), `hard/${i}.jpg`)
-  }
+  })
 }
 
 function loadTexture(url) {

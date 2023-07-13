@@ -10,10 +10,13 @@ class Puzzle extends PIXI.Container {
     super()
 
     this.puzzleMap = gameMap(type)
-    this.puzzleType = type
-    this.emptyPosition = type * type * 2 - 1
+    this.puzzleType = type  //easy =3 
+    this.emptyPosition = type * type * 2 - 1  //默认空的格子在屏幕右下角
 
-	  console.log("this.puzzleMap:",this.puzzleMap)
+    //获取随机数组打乱图片小块
+    console.log("this.puzzleMap:", this.puzzleMap)
+
+    //分割图片并按随机数组载入
     for (let i = 0; i < this.puzzleMap.length; i++) {
       let position = this.puzzleMap[i] - 1;
       let piece = new Piece(resourece, type, i, position)
@@ -70,12 +73,12 @@ class Puzzle extends PIXI.Container {
     this.gameOn = this.checkGameOn()
   }
 
-  update () {
+  update() {
     for (const piece of this.children) {
       piece.update()
     }
   }
-  
+
   checkGameOn() {
     for (const piece of this.children) {
       if (piece.pieceIndex !== piece.piecePosition) {

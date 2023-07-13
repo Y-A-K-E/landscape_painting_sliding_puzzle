@@ -6,18 +6,20 @@ import {
 const BTN_RATIO = 0.25
 
 class Menu extends PIXI.Container {
-  constructor(onBtnClick = function(btnType){
-    console.log("菜单按钮:",btnType)
+  constructor(onBtnClick = function (btnType) {
+    console.log("菜单按钮:", btnType)
   }) {
     super()
 
+    //菜单底图(框)
     let menuWrapper = PIXI.Sprite.from('start.png')
     this.addChild(menuWrapper);
 
+    //3个难度按钮
     this.btnMiddle = PIXI.Sprite.from('middle.png')
     this.btnMiddle.scale.set((menuWrapper.width * BTN_RATIO) / this.btnMiddle.width)
-    this.btnMiddle.x = (menuWrapper.width - this.btnMiddle.width) / 2 
-    this.btnMiddle.y = (menuWrapper.height - this.btnMiddle.height) / 2 +40
+    this.btnMiddle.x = (menuWrapper.width - this.btnMiddle.width) / 2
+    this.btnMiddle.y = (menuWrapper.height - this.btnMiddle.height) / 2 + 40
     this.btnMiddle.interactive = true
     this.btnMiddle.on('pointertap', () => {
       onBtnClick(Constants.MIDDLE)

@@ -14,22 +14,21 @@ class Piece extends PIXI.Container {
     let texture = PIXI.Texture.from(resourece).clone()
 
     // 重构frame，将图片按照难度和序号切割成小块
-	  //console.log(texture,texture.baseTexture.realHeight,texture.baseTexture.realWidth);
-    let cutX = 1000 / type 
+    //console.log(texture,texture.baseTexture.realHeight,texture.baseTexture.realWidth);
+    let cutX = 1000 / type //切割大小 
     let cutY = cutX
-	  //console.log("分割~index:",index)	
-	  //console.log("分割大小:",cutX,cutY);
-	
-	  //console.log("分割坐标:",texture.frame.x + (index % type) * cutX,texture.frame.y + Math.floor(index / type ) * cutY)
-	
+    //console.log("分割~index:",index)	
+    //console.log("分割大小:",cutX,cutY);
+
+    //console.log("分割坐标:",texture.frame.x + (index % type) * cutX,texture.frame.y + Math.floor(index / type ) * cutY)
+
     let rectangle = new PIXI.Rectangle(
       texture.frame.x + (index % type) * cutX,
-      texture.frame.y + Math.floor(index / type ) * cutY,
+      texture.frame.y + Math.floor(index / type) * cutY,
       cutX,
       cutX)
     texture.frame = rectangle
-	  //console.log("完成分割")
-	
+
     let piece = new PIXI.Sprite(texture)
     this.addChild(piece);
 
@@ -44,8 +43,8 @@ class Piece extends PIXI.Container {
     this.piecePosition = position
     this.x = (this.piecePosition % this.pieceType) * this.width
     this.y = Math.floor(this.piecePosition / this.pieceType) * this.height
-    this.targetX = this.x 
-    this.targetY = this.y 
+    this.targetX = this.x
+    this.targetY = this.y
     // 这个数字表示动画是否完成
     // 0表示刚刚开始
     // 1表示已经结束
@@ -58,7 +57,7 @@ class Piece extends PIXI.Container {
     }
     this.ani = 0
     this.piecePosition = position
-    this.originX = this.x 
+    this.originX = this.x
     this.originY = this.y
     this.targetX = (position % this.pieceType) * this.width
     this.targetY = Math.floor(position / this.pieceType) * this.height
