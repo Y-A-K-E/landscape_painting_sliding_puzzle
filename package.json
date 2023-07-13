@@ -16,7 +16,7 @@
     "url": "git@github.com:Y-A-K-E/landscape_painting_sliding_puzzle.git"
   },
   "author": "Y-A-K-E",
-  "license": "appace",
+  "license": "apache",
   "devDependencies": {
     "@babel/core": "^7.1.2",
     "@babel/plugin-proposal-class-properties": "^7.1.0",

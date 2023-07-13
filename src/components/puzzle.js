@@ -13,7 +13,7 @@ class Puzzle extends PIXI.Container {
     this.puzzleType = type
     this.emptyPosition = type * type * 2 - 1
 
-	console.log("this.puzzleMap.length:",this.puzzleMap)
+	  console.log("this.puzzleMap:",this.puzzleMap)
     for (let i = 0; i < this.puzzleMap.length; i++) {
       let position = this.puzzleMap[i] - 1;
       let piece = new Piece(resourece, type, i, position)

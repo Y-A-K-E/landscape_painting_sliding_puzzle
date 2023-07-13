@@ -12,8 +12,8 @@
     "ios >= 8",
     "android >= 5"
   ],
-  "author": "JetLu",
-  "license": "ISC",
+  "author": "Y-A-K-E",
+  "license": "apache",
   "devDependencies": {
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.1"

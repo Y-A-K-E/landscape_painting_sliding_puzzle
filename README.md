@@ -1,6 +1,4 @@
-# 滑块拼图小游戏
-
-## 示例
+# 名人山水画滑块拼图小游戏
 
 
 
@@ -25,8 +23,6 @@
 ``` text
 ./src
 ├── conponents                           // 定义游戏内组件
-│   ├── help.js                          // 帮助界面
-│   ├── hint.js                          // 预览界面
 │   ├── index.js
 │   ├── info.js                          // 结束信息
 │   ├── menu.js                          // 菜单界面
@@ -47,6 +43,7 @@
 │   ├── functions.js                     // 通用方法
 │   ├── gamemap.js                       // 用于提供游戏的随机地图
 │   ├── index.js
+│   ├── wxhttp.js						 // HTTP网络请求事件	
 │   └── swipelistener.js                 // 用于处理游戏内划动事件
 ├── app.js                               // 游戏入口主函数
 └── config.js                            // 游戏配置
